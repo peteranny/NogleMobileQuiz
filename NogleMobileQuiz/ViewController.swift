@@ -5,6 +5,8 @@
 //  Created by Peteranny on 2023/6/30.
 //
 
+import Foundation
+import RxSwift
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         installSubviews()
+        installBindings()
     }
 
     private func installSubviews() {
@@ -29,6 +32,14 @@ class ViewController: UIViewController {
         ])
     }
 
-    private let tableView = TableView()
+    private func installBindings() {
+        let bindSections = Observable<[TableSection]>
+            .just([TableSection(items: [TableSection.Item(name: "Name", price: 100)])])
+            .bind(to: tableView.rx.sections)
 
+        disposeBag.insert(bindSections)
+    }
+
+    private let tableView = TableView()
+    private let disposeBag = DisposeBag()
 }

@@ -21,6 +21,7 @@
 		E3AE025D2A4EA4C60050BB4C /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE025C2A4EA4C60050BB4C /* TableSection.swift */; };
 		E3AE02602A4EA9F80050BB4C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE025F2A4EA9F80050BB4C /* ViewModel.swift */; };
 		E3AE02662A4EC90B0050BB4C /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE02652A4EC90B0050BB4C /* MarketService.swift */; };
+		E3AE02632A4EBDE10050BB4C /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE02622A4EBDE10050BB4C /* PriceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E3AE025C2A4EA4C60050BB4C /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		E3AE025F2A4EA9F80050BB4C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E3AE02652A4EC90B0050BB4C /* MarketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketService.swift; sourceTree = "<group>"; };
+		E3AE02622A4EBDE10050BB4C /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
 		F284B9EC0B62D97248F8E9A0 /* Pods-NogleMobileQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuizTests.release.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuizTests/Pods-NogleMobileQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E3AE02652A4EC90B0050BB4C /* MarketService.swift */,
+				E3AE02622A4EBDE10050BB4C /* PriceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				E3AE02692A4ED3900050BB4C /* TableView.swift in Sources */,
 				E3AE025D2A4EA4C60050BB4C /* TableSection.swift in Sources */,
 				E3AE02602A4EA9F80050BB4C /* ViewModel.swift in Sources */,
+				E3AE02632A4EBDE10050BB4C /* PriceService.swift in Sources */,
 				E39FB7542A4E9E8700B4B32C /* AppDelegate.swift in Sources */,
 				E3AE02662A4EC90B0050BB4C /* MarketService.swift in Sources */,
 			);

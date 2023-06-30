@@ -15,6 +15,9 @@ class ViewModel {
         let sections: Driver<[TableSection]>
     }
 
+    /// Bind the inputs to the view model
+    /// - Parameter inputs: The inputs to the view model
+    /// - Returns: The outputs from the view model
     func bind(inputs: Inputs) -> Outputs {
         let sections = itemsRelay.asDriver().map { [TableSection(items: $0)] }
 
@@ -23,6 +26,7 @@ class ViewModel {
 
     init() {
         fetchMarketNames()
+        subscribePrices()
     }
 
     // MARK: - Private
@@ -37,6 +41,18 @@ class ViewModel {
             )
     }
 
+    private func subscribePrices() {
+        priceService.prices()
+            .withLatestFrom(itemsRelay, resultSelector: { ($0, $1) })
+            .map { prices, items in
+                items.map { TableSection.Item(name: $0.name, price: prices[$0.name]) }
+            }
+            .bind(to: itemsRelay)
+            .disposed(by: disposeBag)
+    }
+
     private let marketService = MarketService()
+    private let priceService = PriceService()
     private let itemsRelay = BehaviorRelay<[TableSection.Item]>(value: [])
+    private let disposeBag = DisposeBag()
 }

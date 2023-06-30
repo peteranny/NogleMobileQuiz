@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19EE5CB538ADF36681DFD277 /* Pods_NogleMobileQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E183EDB81DA5F0F00A5F5C45 /* Pods_NogleMobileQuiz.framework */; };
+		20B95D90797A232BDB198FD6 /* Pods_NogleMobileQuiz_NogleMobileQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0653C4D1AFDD9BFA2AE4D705 /* Pods_NogleMobileQuiz_NogleMobileQuizUITests.framework */; };
+		E399685E7DDED4EED24396D7 /* Pods_NogleMobileQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FAA07876E0E3040CBF1AD /* Pods_NogleMobileQuizTests.framework */; };
 		E39FB7542A4E9E8700B4B32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FB7532A4E9E8700B4B32C /* AppDelegate.swift */; };
 		E39FB7582A4E9E8700B4B32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FB7572A4E9E8700B4B32C /* ViewController.swift */; };
 		E39FB75D2A4E9E8800B4B32C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39FB75C2A4E9E8800B4B32C /* Assets.xcassets */; };
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0030D34C6934524112D3B35F /* Pods-NogleMobileQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuiz.release.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuiz/Pods-NogleMobileQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		0653C4D1AFDD9BFA2AE4D705 /* Pods_NogleMobileQuiz_NogleMobileQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NogleMobileQuiz_NogleMobileQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2932B7A2D49B213A6D5107E0 /* Pods-NogleMobileQuiz-NogleMobileQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuiz-NogleMobileQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuiz-NogleMobileQuizUITests/Pods-NogleMobileQuiz-NogleMobileQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
+		390C69542D7759C3505C85D7 /* Pods-NogleMobileQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuizTests/Pods-NogleMobileQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A2AAA206E9589A02D1FACA3 /* Pods-NogleMobileQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuiz.debug.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuiz/Pods-NogleMobileQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		5C3FAA07876E0E3040CBF1AD /* Pods_NogleMobileQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NogleMobileQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6CFF9F650E417B7C118A70F /* Pods-NogleMobileQuiz-NogleMobileQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuiz-NogleMobileQuizUITests.debug.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuiz-NogleMobileQuizUITests/Pods-NogleMobileQuiz-NogleMobileQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E183EDB81DA5F0F00A5F5C45 /* Pods_NogleMobileQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NogleMobileQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39FB7502A4E9E8700B4B32C /* NogleMobileQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NogleMobileQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39FB7532A4E9E8700B4B32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39FB7572A4E9E8700B4B32C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +56,7 @@
 		E39FB7702A4E9E8800B4B32C /* NogleMobileQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NogleMobileQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39FB7742A4E9E8800B4B32C /* NogleMobileQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NogleMobileQuizUITests.swift; sourceTree = "<group>"; };
 		E39FB7762A4E9E8800B4B32C /* NogleMobileQuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NogleMobileQuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F284B9EC0B62D97248F8E9A0 /* Pods-NogleMobileQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuizTests.release.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuizTests/Pods-NogleMobileQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EE5CB538ADF36681DFD277 /* Pods_NogleMobileQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E399685E7DDED4EED24396D7 /* Pods_NogleMobileQuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +80,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B95D90797A232BDB198FD6 /* Pods_NogleMobileQuiz_NogleMobileQuizUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02D1DAD2638D74370B03CD3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AAA206E9589A02D1FACA3 /* Pods-NogleMobileQuiz.debug.xcconfig */,
+				0030D34C6934524112D3B35F /* Pods-NogleMobileQuiz.release.xcconfig */,
+				B6CFF9F650E417B7C118A70F /* Pods-NogleMobileQuiz-NogleMobileQuizUITests.debug.xcconfig */,
+				2932B7A2D49B213A6D5107E0 /* Pods-NogleMobileQuiz-NogleMobileQuizUITests.release.xcconfig */,
+				390C69542D7759C3505C85D7 /* Pods-NogleMobileQuizTests.debug.xcconfig */,
+				F284B9EC0B62D97248F8E9A0 /* Pods-NogleMobileQuizTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		315E3BDB3B694426F35C1DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E183EDB81DA5F0F00A5F5C45 /* Pods_NogleMobileQuiz.framework */,
+				0653C4D1AFDD9BFA2AE4D705 /* Pods_NogleMobileQuiz_NogleMobileQuizUITests.framework */,
+				5C3FAA07876E0E3040CBF1AD /* Pods_NogleMobileQuizTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E39FB7472A4E9E8700B4B32C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +118,8 @@
 				E39FB7692A4E9E8800B4B32C /* NogleMobileQuizTests */,
 				E39FB7732A4E9E8800B4B32C /* NogleMobileQuizUITests */,
 				E39FB7512A4E9E8700B4B32C /* Products */,
+				02D1DAD2638D74370B03CD3B /* Pods */,
+				315E3BDB3B694426F35C1DBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E39FB77A2A4E9E8800B4B32C /* Build configuration list for PBXNativeTarget "NogleMobileQuiz" */;
 			buildPhases = (
+				DF3739242CAAE296176DD744 /* [CP] Check Pods Manifest.lock */,
 				E39FB74C2A4E9E8700B4B32C /* Sources */,
 				E39FB74D2A4E9E8700B4B32C /* Frameworks */,
 				E39FB74E2A4E9E8700B4B32C /* Resources */,
+				CBD63E5F41BEE342E97257D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E39FB77D2A4E9E8800B4B32C /* Build configuration list for PBXNativeTarget "NogleMobileQuizTests" */;
 			buildPhases = (
+				79CF2A4DF7194F63D54D5653 /* [CP] Check Pods Manifest.lock */,
 				E39FB7622A4E9E8800B4B32C /* Sources */,
 				E39FB7632A4E9E8800B4B32C /* Frameworks */,
 				E39FB7642A4E9E8800B4B32C /* Resources */,
@@ -163,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E39FB7802A4E9E8800B4B32C /* Build configuration list for PBXNativeTarget "NogleMobileQuizUITests" */;
 			buildPhases = (
+				26D35A34CF2C3103E8769DFF /* [CP] Check Pods Manifest.lock */,
 				E39FB76C2A4E9E8800B4B32C /* Sources */,
 				E39FB76D2A4E9E8800B4B32C /* Frameworks */,
 				E39FB76E2A4E9E8800B4B32C /* Resources */,
+				7E834AD1EBC458A5E00B24EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +291,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26D35A34CF2C3103E8769DFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NogleMobileQuiz-NogleMobileQuizUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79CF2A4DF7194F63D54D5653 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NogleMobileQuizTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E834AD1EBC458A5E00B24EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NogleMobileQuiz-NogleMobileQuizUITests/Pods-NogleMobileQuiz-NogleMobileQuizUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NogleMobileQuiz-NogleMobileQuizUITests/Pods-NogleMobileQuiz-NogleMobileQuizUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NogleMobileQuiz-NogleMobileQuizUITests/Pods-NogleMobileQuiz-NogleMobileQuizUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD63E5F41BEE342E97257D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NogleMobileQuiz/Pods-NogleMobileQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NogleMobileQuiz/Pods-NogleMobileQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NogleMobileQuiz/Pods-NogleMobileQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3739242CAAE296176DD744 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NogleMobileQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E39FB74C2A4E9E8700B4B32C /* Sources */ = {
@@ -416,6 +565,7 @@
 		};
 		E39FB77B2A4E9E8800B4B32C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A2AAA206E9589A02D1FACA3 /* Pods-NogleMobileQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,6 +593,7 @@
 		};
 		E39FB77C2A4E9E8800B4B32C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0030D34C6934524112D3B35F /* Pods-NogleMobileQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +621,7 @@
 		};
 		E39FB77E2A4E9E8800B4B32C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390C69542D7759C3505C85D7 /* Pods-NogleMobileQuizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		E39FB77F2A4E9E8800B4B32C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F284B9EC0B62D97248F8E9A0 /* Pods-NogleMobileQuizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +663,7 @@
 		};
 		E39FB7812A4E9E8800B4B32C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6CFF9F650E417B7C118A70F /* Pods-NogleMobileQuiz-NogleMobileQuizUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +682,7 @@
 		};
 		E39FB7822A4E9E8800B4B32C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2932B7A2D49B213A6D5107E0 /* Pods-NogleMobileQuiz-NogleMobileQuizUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

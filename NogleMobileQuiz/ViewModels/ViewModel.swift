@@ -31,6 +31,7 @@ class ViewModel {
             .map { items, segment in
                 items.filter { $0.segment == segment }
             }
+            .map { $0.sorted(by: { $0.name < $1.name }) }
             .map { [TableSection(items: $0)] }
 
         let bindSelectSegment = inputs.selectSegment.bind(to: selectedSegmentRelay)

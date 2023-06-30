@@ -26,7 +26,13 @@ class ViewModel {
     func bind(inputs: Inputs) -> Outputs {
         let segments = Driver.just(Segment.allCases)
         let selectedSegment = selectedSegmentRelay.asDriver().distinctUntilChanged()
-        let sections = itemsRelay.asDriver().map { [TableSection(items: $0)] }
+        let sections = Driver
+            .combineLatest(itemsRelay.asDriver(), selectedSegmentRelay.asDriver())
+            .map { items, segment in
+                items.filter { $0.segment == segment }
+            }
+            .map { [TableSection(items: $0)] }
+
         let bindSelectSegment = inputs.selectSegment.bind(to: selectedSegmentRelay)
 
         return .init(
@@ -47,7 +53,7 @@ class ViewModel {
     private func fetchMarketNames() {
         _ = marketService
             .fetchMarketNames()
-            .map { $0.map { TableSection.Item(name: $0, price: nil) } }
+            .map { $0.map { name, segment in TableSection.Item(name: name, segment: segment, price: nil) } }
             .subscribe(
                 with: itemsRelay,
                 onSuccess: { relay, items in relay.accept(items) }
@@ -58,7 +64,7 @@ class ViewModel {
         priceService.prices()
             .withLatestFrom(itemsRelay, resultSelector: { ($0, $1) })
             .map { prices, items in
-                items.map { TableSection.Item(name: $0.name, price: prices[$0.name]) }
+                items.map { TableSection.Item(name: $0.name, segment: $0.segment, price: prices[$0.name]) }
             }
             .bind(to: itemsRelay)
             .disposed(by: disposeBag)

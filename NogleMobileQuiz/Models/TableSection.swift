@@ -11,6 +11,7 @@ import RxDataSources
 struct TableSection {
     struct Item {
         let name: String
+        let segment: Segment
         let price: Double?
     }
 

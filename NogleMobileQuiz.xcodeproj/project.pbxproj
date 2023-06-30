@@ -19,6 +19,8 @@
 		E39FB7772A4E9E8800B4B32C /* NogleMobileQuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FB7762A4E9E8800B4B32C /* NogleMobileQuizUITestsLaunchTests.swift */; };
 		E3AE02692A4ED3900050BB4C /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE02682A4ED3900050BB4C /* TableView.swift */; };
 		E3AE025D2A4EA4C60050BB4C /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE025C2A4EA4C60050BB4C /* TableSection.swift */; };
+		E3AE02602A4EA9F80050BB4C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE025F2A4EA9F80050BB4C /* ViewModel.swift */; };
+		E3AE02662A4EC90B0050BB4C /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE02652A4EC90B0050BB4C /* MarketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		E39FB7762A4E9E8800B4B32C /* NogleMobileQuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NogleMobileQuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E3AE02682A4ED3900050BB4C /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		E3AE025C2A4EA4C60050BB4C /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		E3AE025F2A4EA9F80050BB4C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E3AE02652A4EC90B0050BB4C /* MarketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketService.swift; sourceTree = "<group>"; };
 		F284B9EC0B62D97248F8E9A0 /* Pods-NogleMobileQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuizTests.release.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuizTests/Pods-NogleMobileQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +146,9 @@
 				E39FB7532A4E9E8700B4B32C /* AppDelegate.swift */,
 				E39FB7572A4E9E8700B4B32C /* ViewController.swift */,
 				E3AE02672A4ED3890050BB4C /* Views */,
+				E3AE025E2A4EA9F10050BB4C /* ViewModels */,
 				E3AE025B2A4EA4BD0050BB4C /* Models */,
+				E3AE02642A4EC8F50050BB4C /* Services */,
 				E39FB75C2A4E9E8800B4B32C /* Assets.xcassets */,
 				E39FB75E2A4E9E8800B4B32C /* LaunchScreen.storyboard */,
 				E39FB7612A4E9E8800B4B32C /* Info.plist */,
@@ -181,6 +187,22 @@
 				E3AE025C2A4EA4C60050BB4C /* TableSection.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E3AE025E2A4EA9F10050BB4C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE025F2A4EA9F80050BB4C /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E3AE02642A4EC8F50050BB4C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE02652A4EC90B0050BB4C /* MarketService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,7 +446,9 @@
 				E39FB7582A4E9E8700B4B32C /* ViewController.swift in Sources */,
 				E3AE02692A4ED3900050BB4C /* TableView.swift in Sources */,
 				E3AE025D2A4EA4C60050BB4C /* TableSection.swift in Sources */,
+				E3AE02602A4EA9F80050BB4C /* ViewModel.swift in Sources */,
 				E39FB7542A4E9E8700B4B32C /* AppDelegate.swift in Sources */,
+				E3AE02662A4EC90B0050BB4C /* MarketService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

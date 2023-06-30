@@ -33,13 +33,16 @@ class ViewController: UIViewController {
     }
 
     private func installBindings() {
-        let bindSections = Observable<[TableSection]>
-            .just([TableSection(items: [TableSection.Item(name: "Name", price: 100)])])
-            .bind(to: tableView.rx.sections)
+        let inputs = ViewModel.Inputs()
+        let outputs = viewModel.bind(inputs: inputs)
+
+        let bindSections = outputs.sections
+            .drive(tableView.rx.sections)
 
         disposeBag.insert(bindSections)
     }
 
+    private let viewModel = ViewModel()
     private let tableView = TableView()
     private let disposeBag = DisposeBag()
 }

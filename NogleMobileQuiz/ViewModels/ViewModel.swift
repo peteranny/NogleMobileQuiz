@@ -9,19 +9,32 @@ import RxCocoa
 import RxSwift
 
 class ViewModel {
-    struct Inputs {}
+    struct Inputs {
+        let selectSegment: Observable<Segment>
+    }
 
     struct Outputs {
+        let segments: Driver<[Segment]>
+        let selectedSegment: Driver<Segment>
         let sections: Driver<[TableSection]>
+        let binding: Disposable
     }
 
     /// Bind the inputs to the view model
     /// - Parameter inputs: The inputs to the view model
     /// - Returns: The outputs from the view model
     func bind(inputs: Inputs) -> Outputs {
+        let segments = Driver.just(Segment.allCases)
+        let selectedSegment = selectedSegmentRelay.asDriver().distinctUntilChanged()
         let sections = itemsRelay.asDriver().map { [TableSection(items: $0)] }
+        let bindSelectSegment = inputs.selectSegment.bind(to: selectedSegmentRelay)
 
-        return .init(sections: sections)
+        return .init(
+            segments: segments,
+            selectedSegment: selectedSegment,
+            sections: sections,
+            binding: Disposables.create([bindSelectSegment])
+        )
     }
 
     init() {
@@ -53,6 +66,7 @@ class ViewModel {
 
     private let marketService = MarketService()
     private let priceService = PriceService()
+    private let selectedSegmentRelay = BehaviorRelay<Segment>(value: .spot)
     private let itemsRelay = BehaviorRelay<[TableSection.Item]>(value: [])
     private let disposeBag = DisposeBag()
 }

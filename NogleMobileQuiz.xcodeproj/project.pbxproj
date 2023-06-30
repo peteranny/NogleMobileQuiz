@@ -24,6 +24,7 @@
 		E3AE02692A4ED3900050BB4C /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE02682A4ED3900050BB4C /* TableView.swift */; };
 		E3AE026B2A4F343B0050BB4C /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE026A2A4F343B0050BB4C /* SegmentedControl.swift */; };
 		E3AE026D2A4F348F0050BB4C /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE026C2A4F348F0050BB4C /* Segment.swift */; };
+		E3AE026F2A4F580A0050BB4C /* SortingCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE026E2A4F580A0050BB4C /* SortingCriteria.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E3AE02682A4ED3900050BB4C /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		E3AE026A2A4F343B0050BB4C /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		E3AE026C2A4F348F0050BB4C /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		E3AE026E2A4F580A0050BB4C /* SortingCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingCriteria.swift; sourceTree = "<group>"; };
 		F284B9EC0B62D97248F8E9A0 /* Pods-NogleMobileQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NogleMobileQuizTests.release.xcconfig"; path = "Target Support Files/Pods-NogleMobileQuizTests/Pods-NogleMobileQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 			children = (
 				E3AE025C2A4EA4C60050BB4C /* TableSection.swift */,
 				E3AE026C2A4F348F0050BB4C /* Segment.swift */,
+				E3AE026E2A4F580A0050BB4C /* SortingCriteria.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				E3AE026D2A4F348F0050BB4C /* Segment.swift in Sources */,
 				E3AE02692A4ED3900050BB4C /* TableView.swift in Sources */,
 				E3AE025D2A4EA4C60050BB4C /* TableSection.swift in Sources */,
+				E3AE026F2A4F580A0050BB4C /* SortingCriteria.swift in Sources */,
 				E3AE02602A4EA9F80050BB4C /* ViewModel.swift in Sources */,
 				E3AE02632A4EBDE10050BB4C /* PriceService.swift in Sources */,
 				E39FB7542A4E9E8700B4B32C /* AppDelegate.swift in Sources */,

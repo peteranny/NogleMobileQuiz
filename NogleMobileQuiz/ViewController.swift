@@ -42,7 +42,8 @@ class ViewController: UIViewController {
 
     private func installBindings() {
         let inputs = ViewModel.Inputs(
-            selectSegment: segmentedControl.rx.selectedSegment.compactMap { Segment(rawValue: $0) }
+            selectSegment: segmentedControl.rx.selectedSegment.compactMap { Segment(rawValue: $0) },
+            selectSortingCriteria: tableView.rx.sortingCriteria.asObservable()
         )
 
         let outputs = viewModel.bind(inputs: inputs)
@@ -58,10 +59,14 @@ class ViewController: UIViewController {
         let bindSections = outputs.sections
             .drive(tableView.rx.sections)
 
+        let bindSortingCriteria = outputs.sortingCriteria
+            .drive(tableView.rx.sortingCriteria)
+
         disposeBag.insert(
             bindSegments,
             bindSelectedSegment,
             bindSections,
+            bindSortingCriteria,
             outputs.binding
         )
     }

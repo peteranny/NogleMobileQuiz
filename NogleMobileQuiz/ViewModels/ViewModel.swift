@@ -11,12 +11,14 @@ import RxSwift
 class ViewModel {
     struct Inputs {
         let selectSegment: Observable<Segment>
+        let selectSortingCriteria: Observable<SortingCriteria>
     }
 
     struct Outputs {
         let segments: Driver<[Segment]>
         let selectedSegment: Driver<Segment>
         let sections: Driver<[TableSection]>
+        let sortingCriteria: Driver<SortingCriteria>
         let binding: Disposable
     }
 
@@ -27,20 +29,28 @@ class ViewModel {
         let segments = Driver.just(Segment.allCases)
         let selectedSegment = selectedSegmentRelay.asDriver().distinctUntilChanged()
         let sections = Driver
-            .combineLatest(itemsRelay.asDriver(), selectedSegmentRelay.asDriver())
-            .map { items, segment in
-                items.filter { $0.segment == segment }
+            .combineLatest(itemsRelay.asDriver(), selectedSegmentRelay.asDriver(), sortingCriteriaRelay.asDriver())
+            .map { items, segment, sortingCriteria in
+                let items = items.filter { $0.segment == segment }
+                switch sortingCriteria {
+                case .name:
+                    return items.sorted(by: { $0.name < $1.name })
+                case .price:
+                    return items.sorted(by: { $0.price ?? -1 > $1.price ?? -1 })
+                }
             }
-            .map { $0.sorted(by: { $0.name < $1.name }) }
             .map { [TableSection(items: $0)] }
+        let sortingCriteria = sortingCriteriaRelay.asDriver()
 
         let bindSelectSegment = inputs.selectSegment.bind(to: selectedSegmentRelay)
+        let bindSortingCriteria = inputs.selectSortingCriteria.bind(to: sortingCriteriaRelay)
 
         return .init(
             segments: segments,
             selectedSegment: selectedSegment,
             sections: sections,
-            binding: Disposables.create([bindSelectSegment])
+            sortingCriteria: sortingCriteria,
+            binding: Disposables.create([bindSelectSegment, bindSortingCriteria])
         )
     }
 
@@ -75,5 +85,6 @@ class ViewModel {
     private let priceService = PriceService()
     private let selectedSegmentRelay = BehaviorRelay<Segment>(value: .spot)
     private let itemsRelay = BehaviorRelay<[TableSection.Item]>(value: [])
+    private let sortingCriteriaRelay = BehaviorRelay<SortingCriteria>(value: .name)
     private let disposeBag = DisposeBag()
 }

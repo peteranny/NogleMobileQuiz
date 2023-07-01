@@ -6,6 +6,8 @@
 //
 
 enum SortingCriteria {
-    case name
-    case price
+    case nameAscending
+    case nameDescending
+    case priceAscending
+    case priceDescending
 }

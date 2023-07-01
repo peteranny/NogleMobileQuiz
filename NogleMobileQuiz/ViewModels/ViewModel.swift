@@ -33,9 +33,13 @@ class ViewModel {
             .map { items, segment, sortingCriteria in
                 let items = items.filter { $0.segment == segment }
                 switch sortingCriteria {
-                case .name:
+                case .nameAscending:
                     return items.sorted(by: { $0.name < $1.name })
-                case .price:
+                case .nameDescending:
+                    return items.sorted(by: { $0.name > $1.name })
+                case .priceAscending:
+                    return items.sorted(by: { $0.price ?? -1 < $1.price ?? -1 })
+                case .priceDescending:
                     return items.sorted(by: { $0.price ?? -1 > $1.price ?? -1 })
                 }
             }
@@ -85,6 +89,6 @@ class ViewModel {
     private let priceService = PriceService()
     private let selectedSegmentRelay = BehaviorRelay<Segment>(value: .spot)
     private let itemsRelay = BehaviorRelay<[TableSection.Item]>(value: [])
-    private let sortingCriteriaRelay = BehaviorRelay<SortingCriteria>(value: .name)
+    private let sortingCriteriaRelay = BehaviorRelay<SortingCriteria>(value: .nameAscending)
     private let disposeBag = DisposeBag()
 }

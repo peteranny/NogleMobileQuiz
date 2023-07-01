@@ -96,35 +96,94 @@ private class TableHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    fileprivate let sortByNameButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Name", for: .normal)
-        button.setTitle("Name ▲", for: .selected)
-        button.setTitleColor(.black, for: .normal)
-        return button
-    }()
-
-    fileprivate let sortByPriceButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Price", for: .normal)
-        button.setTitle("▼ Price", for: .selected)
-        button.setTitleColor(.black, for: .normal)
-        return button
-    }()
+    fileprivate let sortByNameButton = TableViewHeaderButton("Name", ascending: "Name ▲", descending: "Name ▼")
+    fileprivate let sortByPriceButton = TableViewHeaderButton("Price", ascending: "▲ Price", descending: "▼ Price")
 }
 
 extension Reactive where Base: TableHeaderView {
     var sortingCriteria: ControlProperty<SortingCriteria> {
         let values = Observable<SortingCriteria>.merge(
-            base.sortByNameButton.rx.tap.map { .name },
-            base.sortByPriceButton.rx.tap.map { .price }
+            base.sortByNameButton.rx.buttonState.compactMap { $0.unlessNormal }.map { $0 == .ascending ? .nameAscending : .nameDescending },
+            base.sortByPriceButton.rx.buttonState.compactMap { $0.unlessNormal }.map { $0 == .ascending ? .priceAscending : .priceDescending }
         )
 
         let valueSink = Binder<SortingCriteria>(base) { base, criteria in
-            base.sortByNameButton.isSelected = criteria == .name
-            base.sortByPriceButton.isSelected = criteria == .price
+            switch criteria {
+            case .nameAscending:
+                base.sortByNameButton.buttonState = .ascending
+                base.sortByPriceButton.buttonState = .normal
+            case .nameDescending:
+                base.sortByNameButton.buttonState = .descending
+                base.sortByPriceButton.buttonState = .normal
+            case .priceAscending:
+                base.sortByNameButton.buttonState = .normal
+                base.sortByPriceButton.buttonState = .ascending
+            case .priceDescending:
+                base.sortByNameButton.buttonState = .normal
+                base.sortByPriceButton.buttonState = .descending
+            }
         }
 
         return ControlProperty(values: values, valueSink: valueSink)
+    }
+}
+
+private class TableViewHeaderButton: UIButton {
+    enum ButtonState {
+        case normal
+        case ascending
+        case descending
+
+        var unlessNormal: ButtonState? {
+            if case .normal = self {
+                return nil
+            }
+            return self
+        }
+    }
+
+    init(_ normal: String, ascending: String, descending: String) {
+        self.normal = normal
+        self.ascending = ascending
+        self.descending = descending
+        super.init(frame: .zero)
+
+        setTitle(normal, for: .normal)
+        setTitleColor(.black, for: .normal)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    let normal: String
+    let ascending: String
+    let descending: String
+
+    var buttonState: ButtonState = .normal {
+        didSet {
+            switch buttonState {
+            case .normal:
+                setTitle(normal, for: .normal)
+            case .ascending:
+                setTitle(ascending, for: .normal)
+            case .descending:
+                setTitle(descending, for: .normal)
+            }
+        }
+    }
+}
+
+extension Reactive where Base: TableViewHeaderButton {
+    var buttonState: Observable<TableViewHeaderButton.ButtonState> {
+        tap.compactMap { [weak base] in base?.buttonState }
+            .map { state -> TableViewHeaderButton.ButtonState in
+                switch state {
+                case .normal, .descending:
+                    return .ascending
+                case .ascending:
+                    return .descending
+                }
+            }
     }
 }

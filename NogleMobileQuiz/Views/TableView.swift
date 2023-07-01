@@ -24,7 +24,7 @@ class TableView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    fileprivate let dataSources = RxTableViewSectionedReloadDataSource<TableSection> { _, tableView, indexPath, item in
+    fileprivate let dataSources = RxTableViewSectionedAnimatedDataSource<TableSection> { _, tableView, indexPath, item in
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.configure(item.name, price: item.price)
         return cell

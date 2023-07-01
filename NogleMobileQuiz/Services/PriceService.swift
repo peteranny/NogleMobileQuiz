@@ -65,7 +65,9 @@ class PriceService {
                 // Keeps receiving the following prices from the topic
                 while true {
                     let object = await receive()
-                    let values = ((object as! [String: Any])["data"] as! [String: [String: Any]]).values
+                    let data = ((object as! [String: Any])["data"] as! [String: [String: Any]])
+                    // We want only values associated with "*_1" keys
+                    let values = data.filter { key, _ in key.hasSuffix("_1") }.values
                     let pairs: [(String, Double)] = values.map { ($0["name"]! as! String, $0["price"] as! Double) }
                     let map = Dictionary(pairs) { $1 }
 

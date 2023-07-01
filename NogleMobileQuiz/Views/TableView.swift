@@ -14,6 +14,7 @@ class TableView: UITableView {
     init() {
         super.init(frame: .zero, style: .plain)
 
+        backgroundColor = .clear
         register(TableViewCell.self, forCellReuseIdentifier: "cell")
 
         rx.setDelegate(self)
@@ -55,6 +56,8 @@ extension Reactive where Base: TableView {
 private class TableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .value1, reuseIdentifier: reuseIdentifier)
+
+        backgroundColor = .white.withAlphaComponent(0.8)
     }
 
     required init?(coder: NSCoder) {

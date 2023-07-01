@@ -21,6 +21,17 @@ class ViewController: UIViewController {
     private func installSubviews() {
         view.backgroundColor = .white
 
+        // Install the background
+        let backgroundView = UIImageView(image: UIImage(named: "background"))
+        backgroundView.contentMode = .scaleAspectFit
+        view.addSubview(backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
+
         // Install the segmented control
         view.addSubview(segmentedControl)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false

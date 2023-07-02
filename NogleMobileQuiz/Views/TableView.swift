@@ -16,6 +16,7 @@ class TableView: UITableView {
 
         backgroundColor = .clear
         register(TableViewCell.self, forCellReuseIdentifier: "cell")
+        allowsSelection = false
 
         rx.setDelegate(self)
             .disposed(by: disposeBag)
